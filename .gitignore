@@ -1,0 +1,8 @@
+venv/
+build/
+dist/
+main.spec
+__pycache__/
+*.pyc
+system_info.db
+system_info_app

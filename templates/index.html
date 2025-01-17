@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Monitor</title>
+    <link href="bootstrap.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-white">
+
+
+    <div class="container mt-5" id="system_info">
+        <h1 class="text-center">System Monitor</h1>
+        <a class="btn btn-secondary mt-5" href="#" onclick="get_history()">View History</a>
+        
+        <div class="col-12 mt-4">
+            <h3>CPU Usage: <span id="cpu">0</span>%</h3>
+            <div class="progress mb-3">
+                <div id="cpu-bar" class="progress-bar bg-danger" style="width: 0%"></div>
+            </div>
+            
+            <h3>RAM Usage: <span id="ram">0</span>%</h3>
+            <div class="progress mb-3">
+                <div id="ram-bar" class="progress-bar bg-warning" style="width: 0%"></div>
+            </div>
+            
+            <h3>Disk Usage: <span id="disk">0</span>%</h3>
+            <div class="progress mb-3">
+                <div id="disk-bar" class="progress-bar bg-success" style="width: 0%"></div>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <button id="recordButton" class="btn btn-success mt-5" onclick="toggleRecording()">Start Recording</button>
+            <span id="timer" class="ms-3">00:00:00</span>
+        </div>
+        
+    </div>
+    
+    <div class="container mt-5 bg-dark" id="history_info" style="display: none;">
+        <a class="btn btn-secondary my-5" href="#" onclick="back_home()">Home</a>
+        <a class="btn btn-secondary my-5" href="#" onclick="clear_history()">Clear</a>
+        <div id="historyTable"></div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
